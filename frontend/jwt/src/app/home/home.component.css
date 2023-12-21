@@ -1,0 +1,14 @@
+.image-container {
+  max-width: 100%;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.scaled-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

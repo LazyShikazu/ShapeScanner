@@ -1,0 +1,23 @@
+<p>Let's gooo, routing is working!</p>
+
+<!-- <button>Image Upload</button> -->
+
+<form (ngSubmit)="onSubmit()" #imageForm="ngForm">
+  <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+  <button type="submit" [disabled]="!imageSelected">Upload Image</button>
+</form>
+
+
+<div *ngIf="imageSelected" class="image-container">
+  <img
+    [src]="imagePreview"
+    alt="Selected Image"
+    (mousemove)="onImageMouseMove($event)"
+    (click)="onImageClick($event)"
+    class="scaled-image"
+
+  />
+</div>
+
+<p *ngIf="selectedCoordinates">Selected Coordinates: {{ selectedCoordinates.x }}, {{ selectedCoordinates.y }}</p>
+
